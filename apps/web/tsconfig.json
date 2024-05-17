@@ -1,0 +1,13 @@
+{
+	"extends": "ts-config/base.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"jsx": "preserve",
+		"esModuleInterop": true
+	},
+	"include": ["./src/**/*", "vite.config.ts"],
+	"exclude": ["node_modules"]
+}

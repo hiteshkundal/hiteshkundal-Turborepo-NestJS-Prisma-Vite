@@ -1,0 +1,34 @@
+{
+  "name": "template",
+  "private": true,
+  "scripts": {
+    "web:dev": "dotenv -- turbo web:dev",
+    "server:dev": "turbo server:dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "build": "turbo build"
+  },
+   "dependencies": {
+    "@nestjs/mapped-types": "*",
+    "dotenv-cli": "^7.4.2"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "prettier": "^3.2.5",
+    "ts-config": "*",
+    "database": "*",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18",
+    "yarn": "1.22.19"
+  },
+  "packageManager": "yarn@1.22.19",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "resolutions": {
+    "string-width": "4.2.3"
+  }
+}

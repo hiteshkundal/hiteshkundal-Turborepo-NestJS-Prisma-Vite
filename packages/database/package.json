@@ -1,0 +1,22 @@
+{
+  "name": "database",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "private": true,
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push --skip-generate",
+    "db:pull": "prisma db pull",
+    "migration:generate": "prisma migrate dev --create-only",
+    "migration:dev": "prisma migrate dev",
+    "migration:prod": "prisma migrate deploy"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "ts-config": "*",
+    "eslint-config-custom": "*"
+  },
+  "devDependencies": {
+    "prisma": "^5.14.0"
+  }
+}

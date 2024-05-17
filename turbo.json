@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local", "**/.env"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "web:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "server:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "migration:generate": {
+      "cache": false
+    }
+  },
+  "globalEnv": [
+    "ENV",
+    "DATABASE_URL",
+    "PORT",
+    "FRONTEND_URL",
+    "BACKEND_URL",
+    "VITE_APP_BACKEND_URL",
+    "ZERODHA_API_KEY",
+    "GOOGLE_CALLBACK_URL",
+	  "GOOGLE_CLIENT_ID",
+	  "GOOGLE_CLIENT_SECRET",
+    "SESSION_SECRET"
+  ]
+}
