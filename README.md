@@ -1,4 +1,4 @@
-Turborepo + Vite+ NestJS
+Turborepo + Vite + NestJS + Redux Toolkit + RTK Query + Chakra
 
 We have a shared database package that we are sharing between different apps.
 
@@ -39,3 +39,9 @@ export class MembersService {
 	}
 }
 ```
+
+1. Generate all possible types based on database and models from `yarn workspace database db:generate` - This is pretty awesome
+2. Pull existing database  - `yarn workspace database db:pull` --- will be used if you already have a database
+
+Some other cool prisma cli for migrations, etc. - https://www.prisma.io/docs/orm/reference/prisma-cli-reference#migrate-dev
+
